@@ -216,10 +216,10 @@ export default function RedotsClubBingo(){
 
         {/* Controls */}
         <div style={{display:"flex",gap:7,margin:"0 0 12px"}}>
-          <button onClick={callNum} disabled={rolling||done} style={{flex:2,padding:"14px",fontSize:15,fontWeight:800,fontFamily:"var(--fH)",letterSpacing:3,border:"none",borderRadius:100,background:done?"#ddd":`linear-gradient(160deg,${C.gold},${C.goldLight},${C.gold})`,color:done?C.muted:C.green,cursor:done?"default":"pointer",opacity:rolling?.6:1,boxShadow:done?"none":`0 4px 20px ${C.gold}35`,transition:"all .2s"}}>{rolling?"ROLLING...":done?"ALL CALLED":"CALL! \ud83c\udfb1"}</button>
-          <button onClick={()=>setAuto(!auto)} disabled={done} style={{padding:"14px 14px",fontSize:10,fontWeight:700,border:`2px solid ${auto?C.greenBright:C.green+"30"}`,borderRadius:100,background:auto?`${C.greenBright}15`:C.white,color:auto?C.greenBright:C.green,cursor:done?"default":"pointer"}}>{auto?"\u23F8":"\u25B6"}</button>
-          <button onClick={()=>setShowVM(true)} style={{padding:"14px 14px",border:`2px solid ${vOn?C.gold:C.muted}40`,borderRadius:100,background:vOn?`${C.gold}15`:C.white,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center"}}><span style={{fontSize:16}}>{vOn?ch.emoji:"\ud83d\udd07"}</span></button>
-          <button onClick={reset} style={{padding:"14px 14px",fontSize:12,fontWeight:700,border:`2px solid ${C.green}20`,borderRadius:100,background:C.white,color:C.muted,cursor:"pointer"}}>\u21BA</button>
+          <button onClick={callNum} disabled={rolling||done} style={{flex:2,padding:"14px",fontSize:15,fontWeight:800,fontFamily:"var(--fH)",letterSpacing:3,border:"none",borderRadius:100,background:done?"#ddd":`linear-gradient(160deg,${C.gold},${C.goldLight},${C.gold})`,color:done?C.muted:C.green,cursor:done?"default":"pointer",opacity:rolling?.6:1,boxShadow:done?"none":`0 4px 20px ${C.gold}35`,transition:"all .2s"}}>{rolling?"ROLLING...":done?"ALL CALLED":"CALL! 🎱"}</button>
+          <button onClick={()=>setAuto(!auto)} disabled={done} style={{padding:"14px 14px",fontSize:10,fontWeight:700,border:`2px solid ${auto?C.greenBright:C.green+"30"}`,borderRadius:100,background:auto?`${C.greenBright}15`:C.white,color:auto?C.greenBright:C.green,cursor:done?"default":"pointer"}}>{auto?"⏸":"▶"}</button>
+          <button onClick={()=>setShowVM(true)} style={{padding:"14px 14px",border:`2px solid ${vOn?C.gold:C.muted}40`,borderRadius:100,background:vOn?`${C.gold}15`:C.white,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center"}}><span style={{fontSize:16}}>{vOn?ch.emoji:"🔇"}</span></button>
+          <button onClick={reset} style={{padding:"14px 14px",fontSize:12,fontWeight:700,border:`2px solid ${C.green}20`,borderRadius:100,background:C.white,color:C.muted,cursor:"pointer"}}>↺</button>
         </div>
 
         {/* Number Board - dark green */}
